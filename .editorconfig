@@ -1,0 +1,5 @@
+[Makefile]
+indent_style = tab
+
+[*.{js,json}]
+indent_style = tab

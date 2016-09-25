@@ -1,0 +1,34 @@
+{
+	"name": "selenium-dom",
+	"version": "0.0.0",
+	"description": "",
+	"keywords": [],
+	"homepage": "https://github.com/moll/node-selenium-dom",
+	"bugs": "https://github.com/moll/node-selenium-dom/issues",
+
+	"author": {
+		"name": "Andri Möll",
+		"email": "andri@dot.ee",
+		"url": "http://themoll.com"
+	},
+
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/moll/node-selenium-dom.git"
+	},
+
+	"licenses": [{
+		"type": "LAGPL",
+		"url": "https://github.com/moll/node-selenium-dom/blob/master/LICENSE"
+	}],
+
+	"main": "index.js",
+
+	"dependencies": {
+		"oolong": ">= 1 < 2"
+	},
+
+	"peerDependencies": {
+		"selenium-webdriver": ">= 2 < 3"
+	}
+}
