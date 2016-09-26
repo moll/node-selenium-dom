@@ -1,8 +1,12 @@
 {
 	"name": "selenium-dom",
 	"version": "0.1.337",
-	"description": "",
-	"keywords": [],
+	"description": "A mixin library for Selenium WebDriver that adds DOM compatible functions to WebDriver and WebElement. Use a more standarized API for your tests.",
+	"keywords": [
+		"selenium",
+		"webdriver",
+		"dom"
+	],
 	"homepage": "https://github.com/moll/node-selenium-dom",
 	"bugs": "https://github.com/moll/node-selenium-dom/issues",
 
