@@ -109,7 +109,8 @@ browser.querySelectorAll("li.events")
 <a name="WebElement"></a>
 WebElement
 ----------
-The [`Selenium.WebElement`][WebElement] class returned from
+The [`Selenium.WebElement`][WebElement] and
+[`Selenium.WebElementPromise`][WebElementPromise] classes returned from
 [`WebDriver.prototype.findElement`][findElement] and other funcitons will be
 extended with a few methods found on the browser DOM's Document.
 
