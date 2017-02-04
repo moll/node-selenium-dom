@@ -11,6 +11,7 @@ SeleniumDom.js API Documentation
 
 ### [WebElement](#WebElement)
 - [classList](#webElement.classList)
+- [textContent](#webElement.textContent)
 - [value](#webElement.value)
 - [.prototype.closest](#WebElement.prototype.closest)([options])
 - [.prototype.querySelector](#WebElement.prototype.querySelector)(selector, [timeout])
@@ -128,6 +129,15 @@ el.then(function(el) { return el.value }) // => Promise of `<input>`'s value.
 <a name="webElement.classList"></a>
 ### webElement.classList
 Returns a [`Promise`][Promise] of the element's classes as an array.
+
+<a name="webElement.textContent"></a>
+### webElement.textContent
+Returns a [`Promise`][Promise] of the element's `textContent`.
+
+**Examples**:
+```javascript
+browser.body.textContent
+```
 
 <a name="webElement.value"></a>
 ### webElement.value

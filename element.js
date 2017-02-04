@@ -41,6 +41,19 @@ O.defineGetter(exports, "classList", function() {
 })
 
 /**
+ * Returns a [`Promise`][Promise] of the element's `textContent`.  
+ *
+ * @example
+ * browser.body.textContent
+ *
+ * @property textContent
+ */
+O.defineGetter(exports, "textContent", function() {
+	var script = "return arguments[0].textContent"
+	return this.getDriver().executeScript(script, this)
+})
+
+/**
  * Returns a [`WebElementPromise`][WebElementPromise] of the element matching
  * the selector.  
  * Given a timeout, retries up to `timeout` milliseconds if the element
