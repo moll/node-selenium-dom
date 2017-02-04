@@ -13,9 +13,10 @@ SeleniumDom.js API Documentation
 - [classList](#webElement.classList)
 - [textContent](#webElement.textContent)
 - [value](#webElement.value)
-- [.prototype.closest](#WebElement.prototype.closest)([options])
+- [.prototype.closest](#WebElement.prototype.closest)(selector)
 - [.prototype.querySelector](#WebElement.prototype.querySelector)(selector, [timeout])
 - [.prototype.querySelectorAll](#WebElement.prototype.querySelectorAll)(selector)
+- [.prototype.scrollIntoView](#WebElement.prototype.scrollIntoView)([options])
 
 
 <a name="SeleniumDom"></a>
@@ -145,15 +146,14 @@ Returns a [`Promise`][Promise] of the element's value.
 Uses [`WebElement.prototype.getAttribute`][getAttribute] internally.
 
 <a name="WebElement.prototype.closest"></a>
-### WebElement.prototype.closest([options])
-Calls the WebElement's DOM method `scrollIntoView`.  
-Given options, passes them on to `scrollIntoView`.
+### WebElement.prototype.closest(selector)
+Returns a [`WebElementPromise`][WebElementPromise] of the closest parent
+matching the selector. Throws if no parent matched.
 
 **Examples**:
 ```javascript
 var el = browser.getElementById("signup-form")
-el.scrollIntoView()
-el.scrollIntoView({block: "start"})
+el.closest("fieldset")
 ```
 
 <a name="WebElement.prototype.querySelector"></a>
@@ -179,4 +179,16 @@ selector.
 ```javascript
 var el = browser.getElementById("signup-form")
 el.querySelector("input[type=email]")
+```
+
+<a name="WebElement.prototype.scrollIntoView"></a>
+### WebElement.prototype.scrollIntoView([options])
+Calls the WebElement's DOM method `scrollIntoView`.  
+Given options, passes them on to `scrollIntoView`.
+
+**Examples**:
+```javascript
+var el = browser.getElementById("signup-form")
+el.scrollIntoView()
+el.scrollIntoView({block: "start"})
 ```

@@ -120,7 +120,7 @@ exports.closest = function(selector) {
  * el.scrollIntoView()
  * el.scrollIntoView({block: "start"})
  *
- * @method closest
+ * @method scrollIntoView
  * @param [options]
  */
 exports.scrollIntoView = function(opts) {
