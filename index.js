@@ -32,13 +32,11 @@ module.exports = function(Selenium) {
 }
 
 function copy(source, target) {
-	return Object.defineProperties(target, getPropertyDescriptors(source))
+	return Object.defineProperties(target, getOwnPropertyDescriptors(source))
 }
 
-function getPropertyDescriptors(obj) {
-	return map(obj, function(key, obj) {
-		return Object.getOwnPropertyDescriptor(obj, key)
-	})
+function getOwnPropertyDescriptors(obj) {
+	return map(obj, Object.getOwnPropertyDescriptor.bind(null, obj))
 }
 
 function map(obj, fn, context) {
