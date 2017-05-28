@@ -19,8 +19,7 @@ SeleniumDom.js API Documentation
 - [.prototype.scrollIntoView](#WebElement.prototype.scrollIntoView)([options])
 
 
-<a name="SeleniumDom"></a>
-SeleniumDom
+SeleniumDom <a name="SeleniumDom"></a>
 -----------
 Extends the given Selenium module's [`WebDriver`][WebDriver] and
 [`WebElement`][WebElement] classes with DOM methods.
@@ -40,8 +39,7 @@ browser.body // => WebElementPromise of `<body>`.
 ```
 
 
-<a name="WebDriver"></a>
-WebDriver
+WebDriver <a name="WebDriver"></a>
 ---------
 The [`Selenium.WebDriver`][WebDriver] class returned from `Selenium.Builder`
 will be extended with a few properties and methods found on the browser
@@ -53,12 +51,10 @@ var browser = new Selenium.Builder().build()
 browser.body // => WebElementPromise of `<body>`.
 ```
 
-<a name="webDriver.body"></a>
-### webDriver.body
+### webDriver.body <a name="webDriver.body"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of `<body>`.
 
-<a name="WebDriver.prototype.elementFromPoint"></a>
-### WebDriver.prototype.elementFromPoint(x, y)
+### WebDriver.prototype.elementFromPoint(x, y) <a name="WebDriver.prototype.elementFromPoint"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of the element under the coordinates `x` and `y`.  
 Uses `document.elementFromPoint` internally.
 
@@ -71,8 +67,7 @@ browser.elementFromPoint(100, 150)
 browser.elementFromPoint(-1, 10)
 ```
 
-<a name="WebDriver.prototype.getElementById"></a>
-### WebDriver.prototype.getElementById(selector, [timeout])
+### WebDriver.prototype.getElementById(selector, [timeout]) <a name="WebDriver.prototype.getElementById"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of the element with the
 given id.  
 Given a timeout, retries up to `timeout` milliseconds if the element
@@ -84,8 +79,7 @@ browser.getElementById("signup-form")
 browser.getElementById("signup-form", 500)
 ```
 
-<a name="WebDriver.prototype.querySelector"></a>
-### WebDriver.prototype.querySelector(selector, [timeout])
+### WebDriver.prototype.querySelector(selector, [timeout]) <a name="WebDriver.prototype.querySelector"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of the element matching
 the selector.  
 Given a timeout, retries up to `timeout` milliseconds if the element
@@ -97,8 +91,7 @@ browser.querySelector("li.event")
 browser.querySelector("li.event", 500)
 ```
 
-<a name="WebDriver.prototype.querySelectorAll"></a>
-### WebDriver.prototype.querySelectorAll(selector)
+### WebDriver.prototype.querySelectorAll(selector) <a name="WebDriver.prototype.querySelectorAll"></a>
 Returns a [Promise][Promise] of [`WebElement`][WebElement]s matching the
 selector.
 
@@ -108,8 +101,7 @@ browser.querySelectorAll("li.events")
 ```
 
 
-<a name="WebElement"></a>
-WebElement
+WebElement <a name="WebElement"></a>
 ----------
 The [`Selenium.WebElement`][WebElement] and
 [`Selenium.WebElementPromise`][WebElementPromise] classes returned from
@@ -127,12 +119,10 @@ var el = browser.getElementById("username")
 el.then(function(el) { return el.value }) // => Promise of `<input>`'s value.
 ```
 
-<a name="webElement.classList"></a>
-### webElement.classList
+### webElement.classList <a name="webElement.classList"></a>
 Returns a [`Promise`][Promise] of the element's classes as an array.
 
-<a name="webElement.textContent"></a>
-### webElement.textContent
+### webElement.textContent <a name="webElement.textContent"></a>
 Returns a [`Promise`][Promise] of the element's `textContent`.
 
 **Examples**:
@@ -140,13 +130,11 @@ Returns a [`Promise`][Promise] of the element's `textContent`.
 browser.body.textContent
 ```
 
-<a name="webElement.value"></a>
-### webElement.value
+### webElement.value <a name="webElement.value"></a>
 Returns a [`Promise`][Promise] of the element's value.  
 Uses [`WebElement.prototype.getAttribute`][getAttribute] internally.
 
-<a name="WebElement.prototype.closest"></a>
-### WebElement.prototype.closest(selector)
+### WebElement.prototype.closest(selector) <a name="WebElement.prototype.closest"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of the closest parent
 matching the selector. Throws if no parent matched.
 
@@ -156,8 +144,7 @@ var el = browser.getElementById("signup-form")
 el.closest("fieldset")
 ```
 
-<a name="WebElement.prototype.querySelector"></a>
-### WebElement.prototype.querySelector(selector, [timeout])
+### WebElement.prototype.querySelector(selector, [timeout]) <a name="WebElement.prototype.querySelector"></a>
 Returns a [`WebElementPromise`][WebElementPromise] of the element matching
 the selector.  
 Given a timeout, retries up to `timeout` milliseconds if the element
@@ -170,8 +157,7 @@ el.querySelector("input[type=email]")
 el.querySelector("input[type=email]", 500)
 ```
 
-<a name="WebElement.prototype.querySelectorAll"></a>
-### WebElement.prototype.querySelectorAll(selector)
+### WebElement.prototype.querySelectorAll(selector) <a name="WebElement.prototype.querySelectorAll"></a>
 Returns a [Promise][Promise] of [`WebElement`][WebElement]s matching the
 selector.
 
@@ -181,8 +167,7 @@ var el = browser.getElementById("signup-form")
 el.querySelector("input[type=email]")
 ```
 
-<a name="WebElement.prototype.scrollIntoView"></a>
-### WebElement.prototype.scrollIntoView([options])
+### WebElement.prototype.scrollIntoView([options]) <a name="WebElement.prototype.scrollIntoView"></a>
 Calls the WebElement's DOM method `scrollIntoView`.  
 Given options, passes them on to `scrollIntoView`.
 
