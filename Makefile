@@ -41,8 +41,8 @@ toc: doc.json
 		--var api_url=$(GITHUB_URL)/blob/master/doc/API.md \
 		tmp/doc/data.json > tmp/TOC.md
 
-	@echo '/^API$$/,/^License$$/{/^API$$/{r tmp/TOC.md\na\\\n\\\n\\\n\n};/^License/!d;}' |\
-		sed -i "" -f /dev/stdin README.md
+	@echo -e '/^API$$/,/^License$$/{/^API$$/{r tmp/TOC.md\na\\\n\\\n\n};/^License/!d;}' |\
+		sed -i -f- README.md
 
 doc.json:
 	@mkdir -p tmp
