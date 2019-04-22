@@ -49,10 +49,12 @@ For extended documentation on all functions, please see the
 
 ### [WebElement](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement)
 - [classList](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#webElement.classList)
+- [textContent](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#webElement.textContent)
 - [value](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#webElement.value)
-- [.prototype.closest](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement.prototype.closest)([options])
+- [.prototype.closest](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement.prototype.closest)(selector)
 - [.prototype.querySelector](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement.prototype.querySelector)(selector, [timeout])
 - [.prototype.querySelectorAll](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement.prototype.querySelectorAll)(selector)
+- [.prototype.scrollIntoView](https://github.com/moll/node-selenium-dom/blob/master/doc/API.md#WebElement.prototype.scrollIntoView)([options])
 
 
 License
