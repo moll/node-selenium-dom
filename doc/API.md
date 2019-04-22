@@ -105,7 +105,7 @@ WebElement <a name="WebElement"></a>
 ----------
 The [`Selenium.WebElement`][WebElement] and
 [`Selenium.WebElementPromise`][WebElementPromise] classes returned from
-[`WebDriver.prototype.findElement`][findElement] and other funcitons will be
+[`WebDriver.prototype.findElement`][findElement] and other functions will be
 extended with a few methods found on the browser DOM's Document.
 
 [findElement]: https://seleniumhq.github.io/selenium/docs/api/javascript/module/selenium-webdriver/lib/webdriver_exports_WebDriver.html#findElement
